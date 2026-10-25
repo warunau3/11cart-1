@@ -15,6 +15,7 @@
 <meta property="og:url" content="https://11cartonlinestore-blip.github.io/11cart/">
 <meta property="og:site_name" content="11Cart Sri Lanka">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://i.imgur.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;700;800;900&family=Baloo+2:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -154,9 +155,6 @@ nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.08);}
 .card-body{padding:16px 18px 18px;}
 .card-top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
 .card-cat{display:inline-block;background:var(--orange-pale);color:var(--orange);font-size:10px;font-weight:700;padding:3px 9px;border-radius:99px;letter-spacing:0.02em;}
-.card-stars{display:flex;align-items:center;gap:3px;}
-.card-stars .stars-display{font-size:11px;letter-spacing:-1px;}
-.card-stars .rating-num{font-size:10px;font-weight:700;color:#888;}
 .card-body h3{font-size:14px;font-weight:800;line-height:1.45;margin-bottom:10px;color:var(--dark);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .card-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:13px;}
 .card-price{font-family:'Baloo 2',sans-serif;font-size:20px;font-weight:900;color:var(--orange);}
@@ -201,11 +199,6 @@ nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.08);}
 .spec-val{color:var(--dark);font-weight:700;text-align:right;max-width:60%;}
 .modal-right{padding:20px 22px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;}
 .modal-right h2{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:900;line-height:1.35;color:var(--dark);}
-.modal-rating-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.modal-stars-big{font-size:17px;letter-spacing:-1px;line-height:1;}
-.modal-rating-label{font-size:13px;font-weight:700;color:var(--dark);}
-.modal-review-count{font-size:12px;font-weight:600;color:#bbb;}
-.write-review-link{font-size:12px;font-weight:700;color:var(--orange);cursor:pointer;margin-left:auto;text-decoration:underline;}
 .modal-price-area{display:flex;align-items:baseline;gap:10px;}
 .modal-price{font-family:'Baloo 2',sans-serif;font-size:30px;font-weight:900;color:var(--orange);}
 .modal-old-price{font-size:15px;font-weight:600;color:#ccc;text-decoration:line-through;}
@@ -217,36 +210,19 @@ nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.08);}
 .modal-share span{font-size:12px;font-weight:700;color:#bbb;}
 .share-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;background:#f5f5f5;transition:all 0.2s;cursor:pointer;border:none;text-decoration:none;}
 .share-btn:hover{background:var(--orange-pale);transform:scale(1.1);}
+.order-quantity{display:flex;flex-direction:column;gap:8px;background:#fff8f4;border:1px solid rgba(255,92,0,0.12);border-radius:var(--radius-md);padding:13px;}
+.order-field label{font-size:13px;font-weight:800;}
+.order-field{display:flex;align-items:center;gap:10px;}
+.order-field input{width:100%;min-width:0;padding:9px;border:1px solid #ddd;border-radius:8px;font:inherit;}
+.order-field:first-child input{max-width:90px;}
+.order-field.area{display:grid;grid-template-columns:1fr;}
+.order-quantity p{font-size:12px;color:#777;}
 .modal-actions{display:flex;gap:10px;}
 .modal-actions a{flex:1;text-align:center;padding:14px;border-radius:var(--radius-md);font-weight:800;font-size:14px;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:6px;}
 .modal-actions .m-wa{background:var(--green);color:white;}
 .modal-actions .m-wa:hover{background:var(--green-dark);}
 .modal-actions .m-det{background:var(--dark);color:white;}
 .modal-actions .m-det:hover{opacity:0.85;}
-
-/* REVIEWS */
-.modal-reviews{display:flex;flex-direction:column;gap:10px;}
-.reviews-title{font-size:14px;font-weight:800;color:var(--dark);}
-.review-card{background:#fafafa;border-radius:var(--radius-md);padding:13px;border:1px solid #f0f0f0;animation:fadeUp 0.3s ease both;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.review-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
-.review-name{font-size:13px;font-weight:800;color:var(--dark);}
-.review-stars{font-size:12px;}
-.review-date{font-size:11px;color:#bbb;font-weight:600;margin-bottom:6px;}
-.review-text{font-size:13px;color:#666;line-height:1.7;font-weight:500;}
-.no-reviews{text-align:center;padding:20px;color:#bbb;font-size:13px;font-weight:600;}
-.review-form{background:#fff8f4;border-radius:var(--radius-md);padding:15px;border:1px solid rgba(255,92,0,0.12);display:none;}
-.review-form.open{display:block;animation:fadeUp 0.3s ease;}
-.review-form h4{font-size:14px;font-weight:800;margin-bottom:11px;color:var(--dark);}
-.star-picker{display:flex;gap:4px;margin-bottom:11px;}
-.star-pick{font-size:22px;cursor:pointer;transition:transform 0.15s;filter:grayscale(1) opacity(0.35);}
-.star-pick.active{filter:none;transform:scale(1.2);}
-.star-pick:hover{filter:none;transform:scale(1.15);}
-.review-name-input,.review-textarea{width:100%;padding:10px 13px;border:2px solid #eee;border-radius:var(--radius-sm);font-size:13px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;color:var(--dark);background:white;transition:border-color 0.2s;margin-bottom:9px;}
-.review-name-input:focus,.review-textarea:focus{outline:none;border-color:var(--orange);}
-.review-textarea{height:76px;resize:none;}
-.review-submit{width:100%;background:var(--orange);color:white;border:none;padding:11px;border-radius:var(--radius-sm);font-weight:800;font-size:14px;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.2s;}
-.review-submit:hover{background:var(--orange-light);}
 
 /* TRUST FULL */
 .trust-full{margin:0 5%;background:var(--dark);color:white;border-radius:28px;padding:52px 5%;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center;}
@@ -348,7 +324,7 @@ fbq('init','4471022639844958');fbq('track','PageView');
 
 <section class="hero">
   <div>
-    <div class="hero-badge">🇱🇰 Sri Lanka's #1 Kids Store</div>
+    <div class="hero-badge">🇱🇰 Kids &amp; Baby Products in Sri Lanka</div>
     <h1>Make Every Child Smile<br><em>Happy Kids</em></h1>
     <p class="hero-sub">
       ළමා toys, ride on jeeps, swimming pools, baby products සහ තවත් ගොඩක් දේවල් දැන් ලංකාවේ ඕනෑම තැනකට delivery 🚚<br><br>
@@ -360,15 +336,15 @@ fbq('init','4471022639844958');fbq('track','PageView');
     </div>
   </div>
   <div class="slider-wrap">
-    <img id="sliderImg" src="https://i.imgur.com/PQKPCCD.jpeg" alt="11Cart Products">
+    <img id="sliderImg" src="https://i.imgur.com/PQKPCCD.jpeg" alt="11Cart products" fetchpriority="high" decoding="async">
     <div class="slider-dots" id="sliderDots"></div>
   </div>
 </section>
 
 <div class="trust-strip">
-  <div class="trust-item"><div class="trust-icon-box">🚚</div><div class="trust-item-text"><h4>Islandwide Delivery</h4><p>Anywhere in Sri Lanka</p></div></div>
-  <div class="trust-item"><div class="trust-icon-box">💵</div><div class="trust-item-text"><h4>Cash On Delivery</h4><p>Pay when you receive</p></div></div>
-  <div class="trust-item"><div class="trust-icon-box">⭐</div><div class="trust-item-text"><h4>Trusted Seller</h4><p>Premium quality only</p></div></div>
+  <div class="trust-item"><div class="trust-icon-box">🚚</div><div class="trust-item-text"><h4>Islandwide Delivery</h4><p>Ask about fees and delivery timing</p></div></div>
+  <div class="trust-item"><div class="trust-icon-box">💵</div><div class="trust-item-text"><h4>Cash On Delivery</h4><p>Ask us to confirm payment options</p></div></div>
+  <div class="trust-item"><div class="trust-icon-box">⭐</div><div class="trust-item-text"><h4>Product Information</h4><p>Check details before ordering</p></div></div>
   <div class="trust-item"><div class="trust-icon-box">💬</div><div class="trust-item-text"><h4>WhatsApp Support</h4><p>Fast & friendly help</p></div></div>
 </div>
 
@@ -420,8 +396,7 @@ fbq('init','4471022639844958');fbq('track','PageView');
       <option value="high">Price: High → Low</option>
       <option value="name">Name: A–Z</option>
       <option value="discount">Biggest Discount</option>
-      <option value="rating">Top Rated</option>
-    </select>
+      </select>
     <div class="view-toggle">
       <button class="view-btn active" id="gridViewBtn" onclick="setView('grid')" title="Grid view">⊞</button>
       <button class="view-btn" id="listViewBtn" onclick="setView('list')" title="List view">☰</button>
@@ -457,10 +432,10 @@ fbq('init','4471022639844958');fbq('track','PageView');
 
 <section style="padding:0 0 72px;">
   <div class="trust-full">
-    <div class="trust-col"><div class="t-icon">🚚</div><h3>Islandwide Delivery</h3><p>Fast & reliable delivery to every corner of Sri Lanka.</p></div>
+    <div class="trust-col"><div class="t-icon">🚚</div><h3>Islandwide Delivery</h3><p>Message us to confirm delivery availability, fees and estimated timing.</p></div>
     <div class="trust-col"><div class="t-icon">💬</div><h3>WhatsApp Support</h3><p>Instant customer support. We respond fast and are always here.</p></div>
-    <div class="trust-col"><div class="t-icon">⭐</div><h3>Trusted by Parents</h3><p>Hundreds of happy customers across Sri Lanka trust 11Cart.</p></div>
-    <div class="trust-col"><div class="t-icon">💵</div><h3>Cash On Delivery</h3><p>No need to pay upfront. Pay cash when your order arrives.</p></div>
+    <div class="trust-col"><div class="t-icon">⭐</div><h3>Order Support</h3><p>Message us to confirm availability and delivery details.</p></div>
+    <div class="trust-col"><div class="t-icon">💵</div><h3>Cash On Delivery</h3><p>Ask us to confirm payment options before placing an order.</p></div>
   </div>
 </section>
 
@@ -468,11 +443,11 @@ fbq('init','4471022639844958');fbq('track','PageView');
   <div class="footer-top">
     <div class="footer-brand">
       <div class="f-logo">11<span>Cart</span></div>
-      <p>Premium toys, baby products, hoverboards and ride-on jeeps in Sri Lanka. Trusted by parents island-wide.</p>
+      <p>Shop toys, baby products, hoverboards and ride-on jeeps. Message us for product and order questions.</p>
       <div class="footer-socials">
         <a href="https://wa.me/94768665158" target="_blank">💬</a>
         <a href="https://www.facebook.com/profile.php?id=61588464962818" target="_blank">📘</a>
-        <a href="#" target="_blank">📸</a>
+        
       </div>
     </div>
     <div class="footer-col">
@@ -483,9 +458,9 @@ fbq('init','4471022639844958');fbq('track','PageView');
     </div>
     <div class="footer-col">
       <h4>Policy</h4>
-      <p>🔄 Easy Returns</p>
-      <p>✅ Authentic Products</p>
-      <p>🔒 Safe & Secure</p>
+      <p>🔄 Ask us about the return policy</p>
+      <p>🚚 Confirm delivery fee and timing</p>
+      <p>💵 Confirm payment options on WhatsApp</p>
     </div>
   </div>
   <div class="footer-bottom">
@@ -515,12 +490,6 @@ fbq('init','4471022639844958');fbq('track','PageView');
       </div>
       <div class="modal-right">
         <h2 id="modalName"></h2>
-        <div class="modal-rating-row">
-          <span class="modal-stars-big" id="modalStarsBig"></span>
-          <span class="modal-rating-label" id="modalRatingLabel"></span>
-          <span class="modal-review-count" id="modalReviewCount"></span>
-          <span class="write-review-link" onclick="toggleReviewForm()">✍️ Write a Review</span>
-        </div>
         <div class="modal-price-area">
           <span class="modal-price" id="modalPrice"></span>
           <span class="modal-old-price" id="modalOldPrice" style="display:none"></span>
@@ -530,28 +499,12 @@ fbq('init','4471022639844958');fbq('track','PageView');
         <div class="modal-desc" id="modalDesc"></div>
         <div class="modal-share">
           <span>Share:</span>
-          <a class="share-btn" id="shareWA" href="#" target="_blank" title="Share on WhatsApp">💬</a>
-          <a class="share-btn" id="shareFB" href="#" target="_blank" title="Share on Facebook">📘</a>
+          <a class="share-btn" id="shareWA" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share product on WhatsApp" title="Share on WhatsApp">💬</a>
+          <a class="share-btn" id="shareFB" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share product on Facebook" title="Share on Facebook">📘</a>
           <button class="share-btn" onclick="copyLink()" title="Copy link">🔗</button>
         </div>
+        <div class="order-quantity"><div class="order-field"><label for="orderQuantity">Quantity</label><input id="orderQuantity" type="number" min="1" max="99" value="1" inputmode="numeric"></div><div class="order-field area"><label for="deliveryArea">Delivery city or district (optional)</label><input id="deliveryArea" type="text" placeholder="e.g., Colombo"></div><p>WhatsApp message will ask 11Cart to confirm stock, delivery fee, timing and payment options.</p></div>
         <div class="modal-actions" id="modalActions"></div>
-        <div class="modal-reviews">
-          <div class="review-form" id="reviewForm">
-            <h4>⭐ Write Your Review</h4>
-            <div class="star-picker" id="starPicker">
-              <span class="star-pick" onclick="pickStar(1)">⭐</span>
-              <span class="star-pick" onclick="pickStar(2)">⭐</span>
-              <span class="star-pick" onclick="pickStar(3)">⭐</span>
-              <span class="star-pick" onclick="pickStar(4)">⭐</span>
-              <span class="star-pick" onclick="pickStar(5)">⭐</span>
-            </div>
-            <input type="text" class="review-name-input" id="reviewerName" placeholder="Your name (e.g. Amara from Colombo)">
-            <textarea class="review-textarea" id="reviewText" placeholder="Share your experience with this product..."></textarea>
-            <button class="review-submit" onclick="submitReview()">Submit Review 🎉</button>
-          </div>
-          <div class="reviews-title" id="reviewsTitle">Customer Reviews</div>
-          <div id="reviewsList"></div>
-        </div>
       </div>
     </div>
   </div>
@@ -580,28 +533,18 @@ let activeCategory=null;
 let searchVal="";
 let currentView="grid";
 let currentProductIndex=null;
-let selectedStarRating=0;
-
-// Reviews stored locally per product name
-function getReviews(name){try{return JSON.parse(localStorage.getItem('r_'+name)||'[]');}catch(e){return[];}}
-function saveReviews(name,r){try{localStorage.setItem('r_'+name,JSON.stringify(r));}catch(e){}}
-function getAvgRating(name){const r=getReviews(name);if(!r.length)return 0;return r.reduce((s,x)=>s+x.rating,0)/r.length;}
 
 function parsePrice(s){if(!s)return 0;return parseFloat(s.toString().replace(/,/g,"").replace(/[^\d.]/g,""))||0;}
 const PLACEHOLDER_IMG="data:image/svg+xml;utf8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#fff3ec"/><text x="50%" y="50%" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ff5c00" text-anchor="middle" dominant-baseline="middle">11Cart</text></svg>');
 function fmtPrice(n){return n.toLocaleString("en-LK",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function escapeHTML(value){return String(value??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(new RegExp(String.fromCharCode(39),"g"),"&#39;");}
+function safeImageURL(value){try{const raw=String(value||"").trim();if(!raw)return PLACEHOLDER_IMG;const url=new URL(raw,window.location.href);if(url.protocol==="https:"||url.protocol==="http:")return url.href;}catch(e){}return PLACEHOLDER_IMG;}
 function col(item,name){
   if(item[name]!==undefined)return item[name]||"";
   const low=name.toLowerCase().replace(/\s+/g," ").trim();
   for(const k of Object.keys(item)){const kc=k.replace(/^\uFEFF/,"").toLowerCase().replace(/\s+/g," ").trim();if(kc===low)return item[k]||"";}
   return "";
 }
-function starsHTML(r){
-  const full=Math.floor(r),half=r-full>=0.5;let s='';
-  for(let i=1;i<=5;i++){if(i<=full)s+='⭐';else if(i===full+1&&half)s+='✨';else s+='☆';}
-  return s;
-}
-
 /* ===== CATEGORY COUNTS ===== */
 // Maps category keywords → count element IDs
 const catCountMap=[
@@ -629,7 +572,7 @@ function updateCategoryCounts(){
 async function loadProducts(){
   const container=document.getElementById('productsContainer');
   try{
-    const res=await fetch(sheetURL+'&t='+Date.now());
+    const res=await fetch(sheetURL);
     if(!res.ok)throw new Error("HTTP "+res.status);
     const csv=await res.text();
     Papa.parse(csv,{
@@ -663,15 +606,34 @@ async function loadProducts(){
         }
         updateCategoryCounts();
         renderProducts(allProducts);
+        openProductFromURL();
       },
-      error(err){container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px;font-weight:700;color:#c00'>Parse error: ${err}</div>`;}
+      error(err){container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px;font-weight:700;color:#c00'>Parse error: ${escapeHTML(err)}</div>`;}
     });
   }catch(err){
-    container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px'><div style='font-size:48px'>⚠️</div><p style='font-size:19px;font-weight:800;margin-top:14px'>Products load කරන්න බැරිඋනා</p><p style='font-size:15px;color:#888;margin-top:8px'>${err.message}</p><p style='font-size:14px;color:#aaa;margin-top:8px'>Google Sheet published CSV URL එක check කරන්න</p></div>`;
+    container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px'><div style='font-size:48px'>⚠️</div><p style='font-size:19px;font-weight:800;margin-top:14px'>Products load කරන්න බැරිඋනා</p><p style='font-size:15px;color:#888;margin-top:8px'>${escapeHTML(err.message)}</p><p style='font-size:14px;color:#aaa;margin-top:8px'>Google Sheet published CSV URL එක check කරන්න</p></div>`;
   }
 }
 
 /* ===== RENDER ===== */
+function productPageURL(p){
+  const url=new URL(window.location.href);
+  url.searchParams.set("product",p.name);
+  return url.toString();
+}
+function makeOrderURL(p,quantity,deliveryArea){
+  const price=p.discountedPrice>0&&p.discountedPrice<p.price?p.discountedPrice:p.price;
+  const area=String(deliveryArea||"").trim()||"I will share in WhatsApp";
+  const message="Hi 11Cart, I want to order "+p.name+". Quantity: "+quantity+". Listed unit price: Rs "+fmtPrice(price)+". Items subtotal before delivery: Rs "+fmtPrice(price*quantity)+". Delivery city/district: "+area+". Please confirm stock, delivery fee, estimated delivery time and payment options.";
+  return "https://wa.me/94768665158?text="+encodeURIComponent(message);
+}
+function openProductFromURL(){
+  const requested=new URLSearchParams(window.location.search).get("product");
+  if(!requested)return;
+  const index=allProducts.findIndex(p=>p.name.toLowerCase()===requested.toLowerCase());
+  if(index>=0)openModal(index);
+}
+
 function renderProducts(products){
   renderedProducts=products;
   const container=document.getElementById('productsContainer');
@@ -690,22 +652,19 @@ function renderProducts(products){
     const showPrice=hasDis?p.discountedPrice:p.price;
     const discPct=hasDis?Math.round(((p.price-p.discountedPrice)/p.price)*100):0;
     const lowStock=p.stock>0&&p.stock<=5;
-    const thumb=p.thumbnail||p.image1||PLACEHOLDER_IMG;
-    const safeName=p.name.replace(/"/g,"&quot;");
-    const avg=getAvgRating(p.name);
-    const revCount=getReviews(p.name).length;
+    const thumb=escapeHTML(safeImageURL(p.thumbnail||p.image1));
+    const safeName=escapeHTML(p.name);
 
     html+=`<div class="product-card" onclick="openModal(${i})">`;
     html+=`<div class="badge-row">`;
     html+=lowStock?`<span class="badge-stock">⚡ Only ${p.stock} left!</span>`:`<span></span>`;
     html+=hasDis?`<span class="badge-discount">-${discPct}%</span>`:'';
     html+=`</div>`;
-    html+=`<div class="card-img-wrap"><img loading="lazy" src="${thumb}" alt="${safeName}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'"><div class="quick-view-overlay"><span class="quick-view-btn">👁 Quick View</span></div></div>`;
-    html+=`<div class="card-body"><div class="card-top-row"><span class="card-cat">${p.category}</span>`;
-    if(avg>0)html+=`<div class="card-stars"><span class="stars-display">${starsHTML(avg)}</span><span class="rating-num">(${revCount})</span></div>`;
-    html+=`</div><h3>${p.name}</h3><div class="card-price-row"><span class="card-price">Rs ${fmtPrice(showPrice)}</span>`;
+    html+=`<div class="card-img-wrap"><img loading="lazy" decoding="async" src="${thumb}" alt="${safeName}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'"><div class="quick-view-overlay"><span class="quick-view-btn">👁 Quick View</span></div></div>`;
+    html+=`<div class="card-body"><div class="card-top-row"><span class="card-cat">${escapeHTML(p.category)}</span>`;
+      html+=`</div><h3>${escapeHTML(p.name)}</h3><div class="card-price-row"><span class="card-price">Rs ${fmtPrice(showPrice)}</span>`;
     if(hasDis)html+=`<span class="card-old-price">Rs ${fmtPrice(p.price)}</span>`;
-    html+=`</div><div class="card-actions"><button class="card-details-btn" onclick="event.stopPropagation();openModal(${i})">Details</button><a class="card-wa-btn" href="https://wa.me/94768665158?text=I+want+to+order+${encodeURIComponent(p.name)}" target="_blank" onclick="event.stopPropagation();if(typeof fbq!=='undefined')fbq('track','Contact');">💬 Order</a></div></div></div>`;
+    html+=`</div><div class="card-actions"><button class="card-details-btn" onclick="event.stopPropagation();openModal(${i})">Details</button><a class="card-wa-btn" href="${makeOrderURL(p,1)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();if(typeof fbq!=='undefined')fbq('track','Contact');">💬 Order</a></div></div></div>`;
   }
   container.innerHTML=html;
   updateActiveFilterChips();
@@ -738,7 +697,6 @@ function applyAndRender(){
     const db=b.discountedPrice>0&&b.discountedPrice<b.price?((b.price-b.discountedPrice)/b.price):0;
     return db-da;
   });
-  else if(sort==="rating")list.sort((a,b)=>getAvgRating(b.name)-getAvgRating(a.name));
   renderProducts(list);
 }
 
@@ -779,7 +737,7 @@ function updateActiveFilterChips(){
   if(sort)chips.push({label:'↕ '+document.getElementById('sortSelect').selectedOptions[0].text,clear:()=>{document.getElementById('sortSelect').value='';applyAndRender();}});
   if(!chips.length){bar.style.display='none';return;}
   bar.style.display='flex';
-  bar.innerHTML='<span style="font-size:12px;font-weight:700;color:#aaa">Filters:</span>'+chips.map((c,i)=>`<span class="filter-chip" onclick="chipClear(${i})">${c.label} <span>✕</span></span>`).join('');
+  bar.innerHTML='<span style="font-size:12px;font-weight:700;color:#aaa">Filters:</span>'+chips.map((c,i)=>`<span class="filter-chip" onclick="chipClear(${i})">${escapeHTML(c.label)} <span>✕</span></span>`).join('');
   bar._fns=chips.map(c=>c.clear);
 }
 function chipClear(i){const b=document.getElementById('activeFilters');if(b._fns&&b._fns[i])b._fns[i]();}
@@ -798,15 +756,17 @@ document.getElementById('priceMax').addEventListener('input',()=>{clearTimeout(p
 function openModal(i){
   const p=renderedProducts[i];if(!p)return;
   currentProductIndex=i;
+  const productUrl=productPageURL(p);
+  history.replaceState(null,"",productUrl);
   if(typeof fbq!=='undefined')fbq('track','ViewContent',{content_name:p.name,content_category:p.category});
 
   const hasDis=p.discountedPrice>0&&p.discountedPrice<p.price;
   const showPrice=hasDis?p.discountedPrice:p.price;
   const savings=hasDis?(p.price-p.discountedPrice):0;
-  const images=[p.thumbnail,p.image1,p.image2].filter(x=>x&&x.trim()!=="");
+  const images=[p.thumbnail,p.image1,p.image2].filter(x=>x&&x.trim()!=="").map(safeImageURL);
   const mainSrc=images[0]||PLACEHOLDER_IMG;
 
-  document.getElementById('modalMainImg').src=mainSrc;
+  document.getElementById('modalMainImg').src=safeImageURL(mainSrc);
   document.getElementById('modalName').textContent=p.name;
   document.getElementById('modalCat').textContent=p.category;
   document.getElementById('modalPrice').textContent="Rs "+fmtPrice(showPrice);
@@ -830,13 +790,13 @@ function openModal(i){
   if(p.material)tags.push("🧱 "+p.material);
   if(p.theme)tags.push("🎯 "+p.theme);
   if(p.brand&&p.brand!=="11 Cart"&&p.brand!=="11Cart")tags.push("🏷️ "+p.brand);
-  document.getElementById('modalTags').innerHTML=tags.map(t=>`<span class="modal-tag">${t}</span>`).join("");
+  document.getElementById('modalTags').innerHTML=tags.map(t=>`<span class="modal-tag">${escapeHTML(t)}</span>`).join("");
 
   document.getElementById('modalDesc').textContent=p.description||"Contact us on WhatsApp for more details.";
 
   // Thumbs
   const thumbsEl=document.getElementById('modalThumbs');
-  thumbsEl.innerHTML=images.length>1?images.map((img,idx)=>`<img class="modal-thumb ${idx===0?'active':''}" src="${img}" onclick="switchImg(this,'${img}')" onerror="this.style.display='none'">`).join(""):"";
+  thumbsEl.innerHTML=images.length>1?images.map((img,idx)=>`<img class="modal-thumb ${idx===0?'active':''}" src="${escapeHTML(img)}" onclick="switchImg(this,this.src)" onerror="this.style.display='none'">`).join(""):"";
 
   // Specs
   const specs=[];
@@ -846,73 +806,31 @@ function openModal(i){
   if(p.theme)specs.push(['Theme',p.theme]);
   if(p.stock>0)specs.push(['Stock',p.stock+' available']);
   const specsEl=document.getElementById('modalSpecs');
-  if(specs.length){specsEl.style.display='block';specsEl.innerHTML=`<div class="modal-specs-title">Product Details</div>`+specs.map(([k,v])=>`<div class="spec-row"><span class="spec-key">${k}</span><span class="spec-val">${v}</span></div>`).join('');}
+  if(specs.length){specsEl.style.display='block';specsEl.innerHTML=`<div class="modal-specs-title">Product Details</div>`+specs.map(([k,v])=>`<div class="spec-row"><span class="spec-key">${escapeHTML(k)}</span><span class="spec-val">${escapeHTML(v)}</span></div>`).join('');}
   else specsEl.style.display='none';
 
-  // Rating
-  const reviews=getReviews(p.name);
-  const avg=getAvgRating(p.name);
-  document.getElementById('modalStarsBig').textContent=starsHTML(avg||0);
-  if(reviews.length){
-    document.getElementById('modalRatingLabel').textContent=avg.toFixed(1)+' / 5';
-    document.getElementById('modalReviewCount').textContent=`(${reviews.length} review${reviews.length>1?'s':''})`;
-  }else{
-    document.getElementById('modalRatingLabel').textContent='No ratings yet';
-    document.getElementById('modalReviewCount').textContent='';
-  }
-
-  renderReviewsList(p.name);
-  document.getElementById('reviewForm').classList.remove('open');
-  document.getElementById('reviewerName').value='';
-  document.getElementById('reviewText').value='';
-  selectedStarRating=0;updateStarPicker(0);
-
   // Share
-  const shareText=encodeURIComponent('Check out '+p.name+' on 11Cart Sri Lanka! Rs '+fmtPrice(showPrice));
+  const shareText=encodeURIComponent('Check out '+p.name+' on 11Cart Sri Lanka! Rs '+fmtPrice(showPrice)+' '+productUrl);
   document.getElementById('shareWA').href='https://wa.me/?text='+shareText;
-  document.getElementById('shareFB').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://11cartonlinestore-blip.github.io/11cart/');
+  document.getElementById('shareFB').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(productUrl);
 
   // Actions
-  const waLink="https://wa.me/94768665158?text=I+want+to+order+"+encodeURIComponent(p.name);
-  const detLink="https://wa.me/94768665158?text=I+want+details+about+"+encodeURIComponent(p.name);
-  document.getElementById('modalActions').innerHTML=`<a class="m-wa" href="${waLink}" target="_blank" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');">💬 Order Now</a><a class="m-det" href="${detLink}" target="_blank" onclick="if(typeof fbq!=='undefined')fbq('track','Contact');">ℹ️ Get Details</a>`;
+  const waLink=makeOrderURL(p,1);
+  const detLink="https://wa.me/94768665158?text="+encodeURIComponent("Hi 11Cart, please share more details about "+p.name+". Please confirm availability, delivery fee and estimated delivery time.");
+  document.getElementById('modalActions').innerHTML=`<a class='m-wa' id='modalOrderLink' href='${waLink}' target='_blank' rel='noopener noreferrer'>💬 Order on WhatsApp</a><a class='m-det' href='${detLink}' target='_blank' rel='noopener noreferrer'>ℹ️ Ask a question</a>`;
+  const quantityInput=document.getElementById("orderQuantity");
+  const deliveryAreaInput=document.getElementById("deliveryArea");
+  quantityInput.max=String(p.stock>0?p.stock:99);
+  quantityInput.value="1";
+  deliveryAreaInput.value="";
+  const updateOrderLink=()=>{const max=p.stock>0?p.stock:99;const quantity=Math.max(1,Math.min(max,parseInt(quantityInput.value,10)||1));quantityInput.value=String(quantity);document.getElementById("modalOrderLink").href=makeOrderURL(p,quantity,deliveryAreaInput.value);};
+  quantityInput.oninput=updateOrderLink;
+  deliveryAreaInput.oninput=updateOrderLink;
+  updateOrderLink();
+  document.getElementById("modalOrderLink").addEventListener("click",()=>{if(typeof fbq!=="undefined")fbq("track","Contact");});
 
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow='hidden';
-}
-
-function renderReviewsList(productName){
-  const reviews=getReviews(productName);
-  const el=document.getElementById('reviewsList');
-  const titleEl=document.getElementById('reviewsTitle');
-  titleEl.textContent=reviews.length?`Customer Reviews (${reviews.length})`:'Customer Reviews';
-  if(!reviews.length){el.innerHTML=`<div class="no-reviews">💬 Be the first to review this product!</div>`;return;}
-  el.innerHTML=reviews.slice().reverse().map(r=>`<div class="review-card"><div class="review-top"><span class="review-name">${r.name}</span><span class="review-stars">${starsHTML(r.rating)}</span></div><div class="review-date">${r.date}</div><div class="review-text">${r.text}</div></div>`).join('');
-}
-
-function toggleReviewForm(){document.getElementById('reviewForm').classList.toggle('open');}
-function pickStar(val){selectedStarRating=val;updateStarPicker(val);}
-function updateStarPicker(val){document.querySelectorAll('.star-pick').forEach((s,i)=>s.classList.toggle('active',i<val));}
-
-function submitReview(){
-  const p=renderedProducts[currentProductIndex];if(!p)return;
-  if(!selectedStarRating){showToast('⭐ Please select a star rating!');return;}
-  const name=document.getElementById('reviewerName').value.trim()||'Anonymous';
-  const text=document.getElementById('reviewText').value.trim();
-  if(!text){showToast('✍️ Please write your review!');return;}
-  const reviews=getReviews(p.name);
-  reviews.push({name,text,rating:selectedStarRating,date:new Date().toLocaleDateString('en-LK',{year:'numeric',month:'short',day:'numeric'})});
-  saveReviews(p.name,reviews);
-  const avg=getAvgRating(p.name);
-  document.getElementById('modalStarsBig').textContent=starsHTML(avg);
-  document.getElementById('modalRatingLabel').textContent=avg.toFixed(1)+' / 5';
-  document.getElementById('modalReviewCount').textContent=`(${reviews.length} review${reviews.length>1?'s':''})`;
-  renderReviewsList(p.name);
-  document.getElementById('reviewForm').classList.remove('open');
-  document.getElementById('reviewerName').value='';
-  document.getElementById('reviewText').value='';
-  selectedStarRating=0;updateStarPicker(0);
-  showToast('🎉 Thank you for your review!');
 }
 
 function switchImg(el,src){
@@ -920,7 +838,7 @@ function switchImg(el,src){
   document.querySelectorAll('.modal-thumb').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
 }
-function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';currentProductIndex=null;}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';currentProductIndex=null;const url=new URL(window.location.href);url.searchParams.delete("product");history.replaceState(null,"",url.toString());}
 function closeModalBg(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>showToast('🔗 Link copied!')).catch(()=>showToast('Copy the URL from your browser'));}
