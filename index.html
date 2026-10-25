@@ -2,129 +2,345 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>11Cart Sri Lanka — Little things, big smiles</title>
-<meta name="description" content="Discover toys, baby essentials and playtime favorites at 11Cart Sri Lanka. Browse the collection and order through WhatsApp.">
-<meta name="theme-color" content="#fff9f2">
-<link rel="canonical" href="https://warunau3.github.io/11cart-1/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11 CART Sri Lanka | Toys, Baby Products & More</title>
+<meta name="description" content="Shop kids toys, ride-on cars, baby products, airbeds and everyday essentials at 11 CART Sri Lanka. Islandwide delivery and easy WhatsApp ordering.">
+<meta name="theme-color" content="#151515">
+<meta property="og:title" content="11 CART Sri Lanka | Online Store">
+<meta property="og:description" content="Discover kids toys, ride-on toys, baby products and more. Order easily through WhatsApp.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="11Cart Sri Lanka — Little things, big smiles">
-<meta property="og:description" content="Find a little something for their next big smile. Browse toys and baby essentials from 11Cart.">
-<meta property="og:image" content="https://i.imgur.com/PQKPCCD.jpeg">
-<meta property="og:url" content="https://warunau3.github.io/11cart-1/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+Sinhala:wght@400;500;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://docs.google.com">
+<link rel="preconnect" href="https://wa.me">
 <style>
-:root{--ink:#24231f;--muted:#77746d;--orange:#f26835;--orange-dark:#dc5425;--cream:#fff9f2;--sand:#f5eadc;--green:#17775e;--line:#eee7dd;--white:#fff;--shadow:0 12px 40px rgba(50,38,25,.08);--round:22px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans","Noto Sans Sinhala",sans-serif}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1160px,91%);margin:auto}
-.topline{background:var(--ink);color:#fff;text-align:center;padding:9px 12px;font-size:12px;font-weight:700;letter-spacing:.03em}
-header{position:sticky;top:0;z-index:20;background:rgba(255,249,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(36,35,31,.08)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-family:Nunito,sans-serif;font-size:25px;font-weight:900;letter-spacing:-1px}.brand-mark{width:42px;height:42px;border-radius:15px;background:var(--orange);display:grid;place-items:center;color:#fff;font-size:24px;transform:rotate(-5deg)}.brand em{font-style:normal;color:var(--orange)}.nav-links{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}.nav-links a:hover{color:var(--orange)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;background:var(--ink);color:#fff;padding:12px 19px;font-weight:800;font-size:13px;cursor:pointer;transition:.2s}.nav-cta:hover,.button:hover{background:var(--orange);transform:translateY(-2px)}
-.hero{padding:52px 0 44px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:46px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:99px;background:#ffe7d8;color:#a64622;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font:900 clamp(43px,6vw,74px)/.99 Nunito,sans-serif;letter-spacing:-3px;margin:20px 0 18px;max-width:590px}.hero h1 span{color:var(--orange)}.hero p{max-width:490px;font-size:16px;line-height:1.8;color:var(--muted);margin:0 0 25px}.hero-actions{display:flex;gap:11px;align-items:center;flex-wrap:wrap}.button.primary{background:var(--orange);padding:15px 22px}.button.primary:hover{background:var(--orange-dark)}.button.light{background:#fff;color:var(--ink);border:1px solid var(--line)}.hero-note{font-size:11px;color:var(--muted);margin-top:16px}.hero-art{min-height:400px;position:relative;display:grid;place-items:center}.hero-blob{position:absolute;inset:6% 1% 5% 8%;background:#ffe3cb;border-radius:49% 51% 45% 55%/52% 43% 57% 48%;transform:rotate(-5deg)}.hero-photo{position:relative;width:83%;height:365px;object-fit:cover;border-radius:42% 42% 24px 24px;box-shadow:0 24px 54px rgba(93,58,30,.17);background:#f6dcc4}.float-card{position:absolute;background:#fff;border-radius:17px;padding:13px 16px;box-shadow:var(--shadow);font-size:12px;font-weight:800}.float-card.one{left:0;top:18%}.float-card.two{right:0;bottom:12%}.float-card small{display:block;color:var(--muted);font-weight:600;margin-top:3px}.spark{position:absolute;color:var(--orange);font-size:32px}.spark.a{right:4%;top:9%}.spark.b{left:6%;bottom:12%;font-size:24px}
-.promise{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fffdf9}.promise-row{display:grid;grid-template-columns:repeat(3,1fr)}.promise-item{display:flex;align-items:center;gap:13px;padding:20px 24px;border-right:1px solid var(--line)}.promise-item:last-child{border:0}.promise-icon{width:42px;height:42px;display:grid;place-items:center;background:#fff0e6;border-radius:14px;font-size:20px}.promise-item b{display:block;font-size:13px}.promise-item span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
-section.catalog{padding:74px 0 82px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}.kicker{color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.15em}.section-head h2{font:900 clamp(30px,4vw,43px)/1.1 Nunito,sans-serif;letter-spacing:-1.4px;margin:8px 0 6px}.section-head p{margin:0;color:var(--muted);font-size:14px}.count{color:var(--muted);font-size:12px;font-weight:700}
-.category-scroller{display:flex;gap:9px;overflow:auto;padding:3px 2px 14px;scrollbar-width:none}.category-scroller::-webkit-scrollbar{display:none}.category-chip{white-space:nowrap;border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 15px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer;transition:.2s}.category-chip:hover,.category-chip.active{background:var(--ink);border-color:var(--ink);color:#fff}
-.toolbar{display:grid;grid-template-columns:minmax(180px,1fr) auto auto;gap:10px;margin:14px 0 22px}.search-box{position:relative}.search-box span{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px;color:#9c958c}.search-box input,.sort-select{height:46px;width:100%;border:1px solid var(--line);background:#fff;border-radius:13px;padding:0 14px;color:var(--ink);outline:none;font-size:13px}.search-box input{padding-left:42px}.search-box input:focus,.sort-select:focus{border-color:var(--orange);box-shadow:0 0 0 3px #f2683518}.sort-select{min-width:170px;font-weight:700}.clear-btn{border:0;background:transparent;color:var(--muted);font-size:12px;font-weight:800;cursor:pointer;padding:0 12px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product{background:#fff;border:1px solid rgba(37,32,25,.05);border-radius:18px;overflow:hidden;transition:transform .22s,box-shadow .22s;position:relative}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.photo{height:220px;background:#f7f1e8;position:relative;display:grid;place-items:center;padding:17px;cursor:pointer}.photo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}.badge{position:absolute;left:12px;top:12px;background:#fff;border-radius:99px;padding:6px 9px;font-size:10px;font-weight:900;color:var(--green)}.badge.sale{left:auto;right:12px;background:var(--orange);color:#fff}.p-info{padding:14px}.p-category{font-size:10px;color:var(--orange);font-weight:900;text-transform:uppercase;letter-spacing:.08em}.p-name{font-size:14px;font-weight:800;line-height:1.4;margin:7px 0 9px;min-height:40px}.price-line{display:flex;align-items:baseline;gap:8px;margin-bottom:13px}.price{font:900 20px Nunito,sans-serif}.old-price{font-size:11px;color:#aaa;text-decoration:line-through}.p-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.p-actions button,.p-actions a{border:0;border-radius:10px;padding:10px 6px;text-align:center;font-size:11px;font-weight:800;cursor:pointer}.details-btn{background:#f5f1eb;color:var(--ink)}.order-btn{background:#e5f4ed;color:#126346}.details-btn:hover{background:#eee4d8}.order-btn:hover{background:#ccebdc}.empty{grid-column:1/-1;text-align:center;padding:55px 15px;background:#fff;border:1px dashed var(--line);border-radius:18px;color:var(--muted)}.empty strong{display:block;font:900 24px Nunito,sans-serif;color:var(--ink);margin:8px}.state{grid-column:1/-1;text-align:center;padding:50px 15px;color:var(--muted)}
-.footer{background:#24231f;color:#fff;padding:44px 0 25px}.footer-main{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;padding-bottom:28px}.footer .brand{color:#fff}.footer p{font-size:12px;line-height:1.7;color:#bcb8b1;max-width:370px}.footer-links{display:flex;gap:21px;flex-wrap:wrap;font-size:12px;font-weight:700;color:#e5dfd7}.copyright{border-top:1px solid #ffffff1b;padding-top:17px;color:#aaa;font-size:11px}
-.overlay{position:fixed;inset:0;z-index:80;background:#181612b8;display:none;align-items:center;justify-content:center;padding:18px}.overlay.open{display:flex}.dialog{position:relative;background:#fffdf9;border-radius:22px;width:min(760px,100%);max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 28px 90px #0005}.dialog-image{background:#f7f0e6;min-height:360px;display:grid;place-items:center;padding:25px}.dialog-image img{max-height:390px;object-fit:contain;mix-blend-mode:multiply}.dialog-content{padding:32px 28px}.close{position:absolute;right:13px;top:13px;width:36px;height:36px;border:0;border-radius:50%;background:#f0ebe4;font-size:19px;cursor:pointer}.dialog h3{font:900 26px/1.18 Nunito,sans-serif;margin:10px 0}.dialog .price{display:block;color:var(--orange);font-size:25px;margin:12px 0}.desc{font-size:13px;line-height:1.75;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}.order-form{border-top:1px solid var(--line);margin-top:17px;padding-top:15px;display:grid;gap:10px}.order-form label{font-size:11px;font-weight:800}.order-fields{display:grid;grid-template-columns:90px 1fr;gap:8px}.order-form input{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;padding:0 11px;outline:none}.order-form input:focus{border-color:var(--orange)}.wa-full{background:#18875e;width:100%;padding:13px;border-radius:12px;color:#fff;font-weight:900;text-align:center;border:0;cursor:pointer}.wa-full:hover{background:#116a49}.toast{position:fixed;z-index:100;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;border-radius:99px;padding:12px 18px;font-size:12px;font-weight:800;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:920px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{gap:20px}.hero-photo{height:315px}.hero-art{min-height:340px}}
-@media(max-width:680px){.topline{font-size:10px}.nav{height:64px}.brand{font-size:22px}.brand-mark{width:37px;height:37px}.nav-links{display:none}.nav-cta{padding:10px 13px;font-size:11px}.hero{padding:32px 0 30px;grid-template-columns:1fr;gap:16px}.hero h1{letter-spacing:-2px;margin:16px 0 13px}.hero p{font-size:14px;line-height:1.7;margin-bottom:19px}.hero-photo{width:78%;height:280px}.hero-art{min-height:300px}.float-card{font-size:10px;padding:10px 12px}.promise-row{grid-template-columns:1fr}.promise-item{padding:12px 5px;border-right:0;border-bottom:1px solid var(--line)}.promise-item:last-child{border-bottom:0}.promise-icon{width:37px;height:37px}.promise-item b{font-size:12px}.promise-item span{font-size:10px}section.catalog{padding:52px 0 62px}.section-head{align-items:start}.section-head p{font-size:12px}.count{padding-top:7px}.toolbar{grid-template-columns:1fr auto}.sort-select{min-width:0;width:145px}.clear-btn{grid-column:2;grid-row:2;padding:4px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{height:165px;padding:12px}.p-info{padding:11px}.p-name{font-size:12px;min-height:35px}.price{font-size:17px}.old-price{font-size:10px}.p-actions button,.p-actions a{padding:9px 3px;font-size:10px}.footer-main{display:block}.footer-links{margin-top:18px}.dialog{grid-template-columns:1fr;max-width:440px}.dialog-image{min-height:220px;height:230px}.dialog-image img{max-height:205px}.dialog-content{padding:20px}.dialog h3{font-size:22px}}
-@media(max-width:370px){.wrap{width:94%}.grid{gap:8px}.photo{height:145px}.p-info{padding:9px}.p-name{font-size:11px}.p-actions button,.p-actions a{font-size:9px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+:root{--bg:#f5f6f7;--ink:#17191c;--muted:#697078;--line:#e5e7eb;--card:#fff;--accent:#c8f169;--accent-ink:#17200a;--dark:#151719;--green:#168346;--shadow:0 12px 32px #1118270c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+a{color:inherit}
+.topline{background:var(--accent);color:var(--accent-ink);text-align:center;font-size:12px;font-weight:800;padding:9px 12px;letter-spacing:.2px}
+header{background:var(--dark);color:white;position:sticky;top:0;z-index:20;border-bottom:1px solid #ffffff14}
+.nav{max-width:1240px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:max-content}
+.logo{width:42px;height:42px;border-radius:13px;background:var(--accent);color:#151719;display:grid;place-items:center;font-weight:1000;font-size:17px;letter-spacing:-1px}
+.brandname{font-size:17px;font-weight:900;letter-spacing:.4px;line-height:1.1}
+.brandname small{display:block;color:#b9bec3;font-size:10px;font-weight:600;letter-spacing:1.2px;margin-top:4px}
+.navlinks{margin-left:auto;display:flex;gap:18px;align-items:center;font-size:13px;color:#e5e7eb}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--accent)}
+.navcta{background:var(--accent);color:var(--accent-ink);font-weight:850;padding:10px 14px;border-radius:10px;text-decoration:none;white-space:nowrap}
+main{max-width:1240px;margin:auto;padding:0 20px}
+.hero{margin:24px 0 22px;border-radius:24px;background:linear-gradient(115deg,#17191c 0%,#282d31 68%,#343a3d 100%);color:white;overflow:hidden;position:relative;min-height:260px;display:flex;align-items:center}
+.hero:after{content:"11";position:absolute;right:4%;top:-50px;font-size:290px;line-height:1;font-weight:1000;color:#ffffff08;letter-spacing:-24px;pointer-events:none}
+.hero-content{padding:34px 36px;max-width:670px;position:relative;z-index:1}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:900;color:var(--accent)}
+.hero h1{font-size:clamp(28px,4.5vw,48px);line-height:1.06;letter-spacing:-1.8px;margin:12px 0}
+.hero p{color:#d3d7da;line-height:1.6;margin:0 0 22px;max-width:520px;font-size:15px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:11px;padding:12px 16px;font:inherit;font-size:13px;font-weight:850;text-decoration:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-secondary{border:1px solid #ffffff45;color:white;background:#ffffff0a}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 28px}
+.trust-item{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;gap:11px}
+.trust-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:11px;background:#f0f4e8;font-size:18px;flex-shrink:0}
+.trust-item strong{display:block;font-size:12px}
+.trust-item span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:28px 0 14px}
+.section-head h2{font-size:23px;letter-spacing:-.6px;margin:0}
+.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.count{font-size:12px;color:var(--muted);white-space:nowrap}
+.controls{display:grid;grid-template-columns:minmax(180px,1fr) 210px 180px;gap:10px;margin-bottom:17px}
+.field{width:100%;padding:13px 14px;border:1px solid #dfe2e5;border-radius:12px;background:white;color:var(--ink);font:inherit;font-size:13px;outline:none;min-width:0}
+.field:focus{border-color:#8eac4b;box-shadow:0 0 0 3px #c8f16940}
+.category-pills{display:flex;gap:8px;overflow:auto;padding:1px 0 12px;scrollbar-width:thin}
+.pill{border:1px solid #dfe2e5;background:white;border-radius:999px;padding:9px 13px;white-space:nowrap;font-size:12px;font-weight:750;cursor:pointer}
+.pill.active{background:var(--dark);color:white;border-color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.card{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 38px #11182712}
+.photo{position:relative;background:#fff;aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:contain;padding:10px;display:block}
+.photo-fallback{color:#8b9299;font-size:12px;text-align:center;padding:20px}
+.tag{position:absolute;left:10px;top:10px;border-radius:7px;background:var(--accent);color:#1c2610;padding:5px 7px;font-size:10px;font-weight:900}
+.stock{position:absolute;right:10px;top:10px;background:#ffffffed;border:1px solid #e5e7eb;border-radius:7px;padding:5px 7px;font-size:10px;font-weight:800;color:#4b5563}
+.card-body{padding:13px;display:flex;flex-direction:column;flex:1}
+.cat{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:850;color:#7b838b;margin-bottom:7px}
+.name{font-size:14px;line-height:1.4;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:39px}
+.desc{font-size:11px;line-height:1.5;color:var(--muted);margin-top:7px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prices{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin:12px 0}
+.price{font-size:18px;font-weight:950;letter-spacing:-.4px}
+.oldprice{font-size:11px;color:#858b91;text-decoration:line-through}
+.card-actions{display:grid;grid-template-columns:1fr;gap:7px;margin-top:auto}
+.order-btn{background:var(--green);color:white;padding:11px 8px;border-radius:10px;text-decoration:none;text-align:center;font-size:12px;font-weight:850}
+.details-btn{background:#f3f4f6;color:#25282b;padding:9px 8px;border-radius:9px;border:0;font:inherit;font-size:11px;font-weight:800;cursor:pointer}
+.status{background:white;border:1px dashed #d4d8dc;border-radius:15px;padding:32px 18px;text-align:center;color:var(--muted);font-size:13px;margin-bottom:20px}
+.empty{grid-column:1/-1}
+.benefits{margin:35px 0;background:#eaf0df;border-radius:20px;padding:24px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;align-items:center}
+.benefits h2{margin:0;font-size:22px;letter-spacing:-.7px}
+.benefits p{margin:7px 0 0;font-size:12px;color:#535b4a;line-height:1.6}
+.benefit{font-size:12px;font-weight:800;line-height:1.5}
+.benefit span{display:block;font-size:11px;font-weight:500;color:#5b6253;margin-top:4px}
+.faq{margin:30px 0}
+.faq details{background:white;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:8px 0}
+.faq summary{cursor:pointer;font-size:13px;font-weight:800}
+.faq details p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:0}
+footer{margin-top:35px;background:var(--dark);color:white;padding:30px 20px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap}
+footer p{color:#bfc4c8;font-size:12px;line-height:1.7;margin:7px 0}
+footer a{color:var(--accent);text-decoration:none}
+.footnote{border-top:1px solid #ffffff1c;margin-top:20px;padding-top:15px;color:#8f969c;font-size:10px}
+.float-wa{position:fixed;bottom:18px;right:18px;z-index:30;background:#1fa855;color:white;text-decoration:none;border-radius:999px;padding:13px 17px;font-size:13px;font-weight:900;box-shadow:0 8px 25px #0003}
+dialog{border:0;border-radius:18px;padding:0;max-width:520px;width:calc(100% - 28px);box-shadow:0 25px 80px #0004}
+dialog::backdrop{background:#10121499}
+.modal-inner{padding:22px}
+.modal-close{float:right;border:0;background:#f0f1f2;border-radius:8px;padding:8px 11px;cursor:pointer}
+.modal-inner h3{margin:10px 0;font-size:20px}
+.modal-inner p{font-size:13px;line-height:1.6;color:var(--muted);white-space:pre-wrap}
+@media(max-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.trust{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}}
+@media(max-width:650px){.nav{padding:12px 14px;gap:10px}.logo{width:37px;height:37px}.brandname{font-size:14px}.brandname small{font-size:9px}.navlinks{display:none}.navcta{margin-left:auto;padding:10px 11px;font-size:11px}main{padding:0 13px}.hero{margin:15px 0 15px;min-height:250px;border-radius:18px}.hero-content{padding:25px 20px}.hero h1{letter-spacing:-1px}.hero p{font-size:13px}.hero:after{right:-5%;font-size:220px}.trust{gap:8px;margin-bottom:24px}.trust-item{padding:10px;gap:8px}.trust-icon{width:31px;height:31px;font-size:15px}.trust-item strong{font-size:11px}.trust-item span{font-size:10px}.section-head h2{font-size:20px}.controls{grid-template-columns:1fr 1fr}.controls #search{grid-column:1/-1}.field{padding:12px 10px;font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border-radius:13px}.card-body{padding:10px}.name{font-size:12px;min-height:34px}.price{font-size:16px}.desc{font-size:10px}.tag,.stock{font-size:9px;top:7px}.tag{left:7px}.stock{right:7px}.benefits{grid-template-columns:1fr;padding:19px;gap:15px}.benefits h2{font-size:20px}.float-wa{right:12px;bottom:12px;padding:12px 14px}.count{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+ n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','4471022639844958');fbq('track','PageView');
+</script>
 </head>
 <body>
-<div class="topline">A little joy, delivered across Sri Lanka ✦ Check delivery and payment details with us on WhatsApp</div>
-<header><div class="wrap nav">
-<a class="brand" href="#" aria-label="11Cart home"><span class="brand-mark">11</span><span>11<em>Cart</em></span></a>
-<nav class="nav-links" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#why">How to order</a><a href="#footer">Contact</a></nav>
-<a class="nav-cta" href="https://wa.me/94768665158" target="_blank" rel="noopener noreferrer">💬 Chat with us</a>
-</div></header>
+<div class="topline">🇱🇰 ISLANDWIDE DELIVERY · EASY WHATSAPP ORDERS · 11 CART ONLINE STORE</div>
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#" aria-label="11 CART home"><span class="logo">11C</span><span class="brandname">11 CART <small>ONLINE STORE · SRI LANKA</small></span></a>
+    <div class="navlinks"><a href="#products-section">Shop products</a><a href="#delivery">Delivery & payments</a><a href="#faq">Help</a></div>
+    <a class="navcta" href="https://wa.me/94768665158?text=Hello%2011%20CART%2C%20I%20need%20help%20with%20an%20order." target="_blank" rel="noopener">💬 Chat with us</a>
+  </nav>
+</header>
 <main>
-<section class="wrap hero">
-<div><span class="eyebrow">🧸 For little explorers</span><h1>Little things.<br><span>Big smiles.</span></h1><p>From playtime favorites to thoughtful baby essentials, find something lovely for every little moment at 11Cart.</p><div class="hero-actions"><a class="button primary" href="#shop">Explore the collection <span>→</span></a><a class="button light" href="https://wa.me/94768665158" target="_blank" rel="noopener noreferrer">Ask us on WhatsApp</a></div><div class="hero-note">See something you love? Send us an order request and we’ll confirm the details with you.</div></div>
-<div class="hero-art" aria-label="11Cart featured collection"><div class="hero-blob"></div><img id="heroImage" class="hero-photo" src="https://i.imgur.com/PQKPCCD.jpeg" alt="A featured pick from the 11Cart collection" fetchpriority="high"><div class="float-card one">🎁 Find their next favorite<small>Browse toys & baby essentials</small></div><div class="float-card two">💬 Easy WhatsApp ordering<small>Questions? We’re here to help</small></div><span class="spark a">✳</span><span class="spark b">✦</span></div>
-</section>
-<section id="why" class="promise"><div class="wrap promise-row">
-<div class="promise-item"><span class="promise-icon">🧸</span><div><b>A collection for little ones</b><span>Toys, play and baby essentials</span></div></div>
-<div class="promise-item"><span class="promise-icon">💬</span><div><b>Order with a real conversation</b><span>We confirm stock and order details</span></div></div>
-<div class="promise-item"><span class="promise-icon">🚚</span><div><b>Delivery details, clearly confirmed</b><span>Ask us about fee and timing</span></div></div>
-</div></section>
-<section id="shop" class="catalog"><div class="wrap">
-<div class="section-head"><div><span class="kicker">Made for play</span><h2>Find a new favorite</h2><p>Browse the latest picks from our collection.</p></div><span id="productCount" class="count"></span></div>
-<div id="categories" class="category-scroller" aria-label="Product categories"></div>
-<div class="toolbar"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search toys, pools, baby gear..." autocomplete="off" aria-label="Search products"></label><select id="sort" class="sort-select" aria-label="Sort products"><option value="">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option></select><button id="clear" class="clear-btn" type="button">Clear filters</button></div>
-<div id="products" class="grid"><div class="state">Loading lovely things for little ones…</div></div>
-</div></section>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Welcome to 11 CART</div>
+      <h1>Little joys.<br>Everyday essentials.</h1>
+      <p>Discover kids’ toys, ride-on cars, baby products, home essentials and more — with friendly service and convenient ordering across Sri Lanka.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#products-section">🛍️ Explore products</a><a class="btn btn-secondary" href="https://wa.me/94768665158?text=Hello%2011%20CART%2C%20please%20send%20me%20your%20product%20catalog." target="_blank" rel="noopener">View via WhatsApp ↗</a></div>
+    </div>
+  </section>
+  <section class="trust" aria-label="Store benefits">
+    <div class="trust-item"><div class="trust-icon">🚚</div><div><strong>Islandwide delivery</strong><span>Delivery across Sri Lanka</span></div></div>
+    <div class="trust-item"><div class="trust-icon">💬</div><div><strong>Easy WhatsApp orders</strong><span>Ask before you order</span></div></div>
+    <div class="trust-item"><div class="trust-icon">🛡️</div><div><strong>Warranty on selected items</strong><span>Check product details</span></div></div>
+    <div class="trust-item"><div class="trust-icon">🤝</div><div><strong>Friendly service</strong><span>We're happy to help</span></div></div>
+  </section>
+  <section id="products-section">
+    <div class="section-head"><div><h2>Shop our products</h2><p>Find something great for your family.</p></div><div id="count" class="count">Loading products…</div></div>
+    <div class="controls">
+      <input id="search" class="field" type="search" placeholder="🔎 Search products, brands..." aria-label="Search products">
+      <select id="category" class="field" aria-label="Filter by category"><option value="">All categories</option></select>
+      <select id="sort" class="field" aria-label="Sort products"><option value="featured">Sort: Featured</option><option value="name">Name A–Z</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option></select>
+    </div>
+    <div id="pills" class="category-pills" aria-label="Popular categories"></div>
+    <div id="status" class="status" role="status">Loading the latest products…</div>
+    <div id="products" class="grid"></div>
+  </section>
+  <section class="benefits" id="delivery">
+    <div><h2>Shopping made simple.</h2><p>Choose your product and tap the WhatsApp order button. We’ll help confirm availability, delivery details and payment options before your order is finalised.</p></div>
+    <div class="benefit">📦 Islandwide delivery<span>Delivery time and charges may depend on your location and product.</span></div>
+    <div class="benefit">💳 Payment options<span>Cash on Delivery and any available card/installment options are confirmed with our team.</span></div>
+  </section>
+  <section class="faq" id="faq">
+    <div class="section-head"><div><h2>Quick help</h2><p>Before you place an order.</p></div></div>
+    <details><summary>How do I order a product?</summary><p>Tap “Order on WhatsApp” on the product card. The product name and listed price will be added to a message so our team can help you.</p></details>
+    <details><summary>Do you deliver islandwide?</summary><p>11 CART offers islandwide delivery. Please confirm the delivery charge and estimated arrival time with us before confirming your order.</p></details>
+    <details><summary>How can I check stock or warranty?</summary><p>Message us with the product name. Stock and warranty terms can vary by item and will be confirmed before the order is accepted.</p></details>
+  </section>
 </main>
-<footer id="footer" class="footer"><div class="wrap"><div class="footer-main"><div><a class="brand" href="#"><span class="brand-mark">11</span><span>11<em>Cart</em></span></a><p>Thoughtful finds for playtime, growing and gifting. Browse the collection and message us to confirm availability, delivery and payment details.</p></div><div class="footer-links"><a href="#shop">Shop collection</a><a href="https://wa.me/94768665158" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="#why">How to order</a></div></div><div class="copyright">© 11Cart Sri Lanka · Product prices and availability are confirmed when you place your request.</div></div></footer>
-<div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="dialogName" onclick="if(event.target===this)closeDialog()"><div class="dialog"><button class="close" onclick="closeDialog()" aria-label="Close product details">×</button><div class="dialog-image"><img id="dialogImg" alt=""></div><div class="dialog-content"><span id="dialogCategory" class="p-category"></span><h3 id="dialogName"></h3><span id="dialogPrice" class="price"></span><p id="dialogDesc" class="desc"></p><div class="order-form"><label for="quantity">ORDER REQUEST</label><div class="order-fields"><input id="quantity" type="number" min="1" value="1" aria-label="Quantity"><input id="area" type="text" maxlength="80" placeholder="Delivery town or district" aria-label="Delivery town or district"></div><button id="dialogOrder" class="wa-full">💬 Continue on WhatsApp</button></div></div></div></div>
-<div id="toast" class="toast" role="status"></div>
+<footer>
+  <div class="footer-inner">
+    <div><div class="brandname">🛒 11 CART ONLINE STORE<small>TOYS · BABY PRODUCTS · HOME & MORE</small></div><p>Friendly online shopping across Sri Lanka.<br>Browse products and order directly through WhatsApp.</p></div>
+    <div><strong>Contact us</strong><p>WhatsApp: <a href="https://wa.me/94768665158" target="_blank" rel="noopener">076 866 5158</a><br>Email: <a href="mailto:11cartonlinestore@gmail.com">11cartonlinestore@gmail.com</a><br><a href="https://www.facebook.com/share/1DKeoYHP8m/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/11cart.toys" target="_blank" rel="noopener">Instagram</a></p></div>
+  </div>
+  <div class="footnote">© <span id="year"></span> 11 CART Online Store. Product availability, prices, delivery charges and warranty terms should be confirmed before purchase.</div>
+</footer>
+<a class="float-wa" href="https://wa.me/94768665158?text=Hello%2011%20CART%2C%20I%20need%20help." target="_blank" rel="noopener" aria-label="Chat with 11 CART on WhatsApp">● WhatsApp</a>
+<dialog id="details"><div class="modal-inner"><button class="modal-close" id="close-modal" aria-label="Close details">✕ Close</button><div id="modal-content"></div></div></dialog>
 <script>
-(function(){
-"use strict";
-const SHEET_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vReVFFfTdnBOMgVF15qLDxBxyqbUKedALbb1_tFHpIEKWTD61_cVGqmuSY1Tn20VoqNd1nCyEp-Y1ur/pub?output=csv";
-const WA_NUMBER="94768665158";
-const PLACEHOLDER="data:image/svg+xml;charset=UTF-8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#f5eadc"/><text x="50%" y="50%" font-family="Arial" font-size="34" font-weight="bold" fill="#f26835" text-anchor="middle" dominant-baseline="middle">11Cart</text></svg>');
-let all=[],shown=[],category="",selected=null;
-const byId=id=>document.getElementById(id);
-const safeText=value=>String(value==null?"":value);
-function imageURL(value){try{const u=new URL(safeText(value).trim(),location.href);return /^https?:$/.test(u.protocol)?u.href:PLACEHOLDER}catch(_){return PLACEHOLDER}}
-function money(n){return Number(n||0).toLocaleString("en-LK",{minimumFractionDigits:2,maximumFractionDigits:2})}
-function price(raw){return parseFloat(safeText(raw).replace(/,/g,"").replace(/[^\d.]/g,""))||0}
-function field(row,name){const key=name.toLowerCase().trim();for(const k of Object.keys(row)){if(k.replace(/^\uFEFF/,"").toLowerCase().trim()===key)return row[k]||""}return ""}
-function effective(p){return p.discount>0&&p.discount<p.price?p.discount:p.price}
-function text(el,value){el.textContent=safeText(value)}
-function orderMessage(p,q,area){return "Hi 11Cart, I’d like to order "+p.name+". Quantity: "+q+". Listed unit price: Rs "+money(effective(p))+". Items subtotal before delivery: Rs "+money(effective(p)*q)+". Delivery town/district: "+(area.trim()||"I will share in WhatsApp")+". Please confirm availability, delivery fee, estimated delivery time and payment options."}
-function waURL(p,q,area){return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(orderMessage(p,q,area||""))}
-function productURL(p){const u=new URL(location.href);u.searchParams.set("product",p.name);return u.href}
-function make(tag,cls){const n=document.createElement(tag);if(cls)n.className=cls;return n}
-function renderCategories(){const host=byId("categories");host.replaceChildren();const names=["All products",...new Set(all.map(p=>p.category).filter(Boolean))];names.forEach((name,i)=>{const b=make("button","category-chip"+((i===0&&!category)||name===category?" active":""));b.type="button";b.textContent=name;b.onclick=()=>{category=i===0?"":name;renderCategories();filter()};host.appendChild(b)})}
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1J7pd72gHhLKuFoYMjzWoSPUjuSDUYdVqUaTDaml8eyA/gviz/tq?tqx=out:csv&gid=0";
+const WHATSAPP = "94768665158";
+let products = [];
+const $ = id => document.getElementById(id);
+
+function parseCSV(text){
+  const rows=[]; let row=[], cell="", quoted=false;
+  for(let i=0; i<text.length; i++){
+    const c=text[i], n=text[i+1];
+    if(c=='"' && quoted && n=='"'){ cell+='"'; i++; continue; }
+    if(c=='"'){ quoted=!quoted; continue; }
+    if(c===',' && !quoted){ row.push(cell); cell=""; continue; }
+    if((c==='\n'||c==='\r') && !quoted){
+      if(c==='\r'&&n==='\n') i++;
+      row.push(cell); cell="";
+      if(row.some(x=>x.trim())) rows.push(row);
+      row=[]; continue;
+    }
+    cell+=c;
+  }
+  if(cell.length||row.length){ row.push(cell); rows.push(row); }
+  return rows;
+}
+
+const clean = v => String(v ?? "").trim();
+const norm = v => clean(v).toLowerCase().replace(/[^a-z0-9]/g,"");
+
+function findValue(row, headers, names){
+  for(const name of names){
+    const targetNorm = norm(name);
+    const i = headers.findIndex(h => h === targetNorm);
+    if(i >= 0 && clean(row[i])) return clean(row[i]);
+  }
+  return "";
+}
+
+function money(v){
+  if(!v) return null;
+  const n = Number(String(v).replace(/,/g, "").replace(/[^\d.]/g, ""));
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+function fmt(v){
+  return new Intl.NumberFormat("en-LK", { maximumFractionDigits: 0 }).format(v);
+}
+
+function safeUrl(url){
+  let u = clean(url);
+  if(!u) return "";
+  u = u.replace(/([^:]\/)\/+|(?<!:)\/+/g, "$1");
+  return /^https?:\/\//i.test(u) ? u : "";
+}
+
+function normalise(rows){
+  if(rows.length < 2) throw new Error("No product rows found");
+  const headers = rows[0].map(norm);
+  
+  return rows.slice(1).map(r => {
+    const name = findValue(r, headers, ["Name", "Product Name", "Product", "Title"]);
+    const category = findValue(r, headers, ["Category", "Product Category", "Type"]);
+    
+    const discountedPrice = money(findValue(r, headers, ["Discounted Price", "Sale Price", "Selling Price", "Our Price"]));
+    const originalPrice = money(findValue(r, headers, ["Price", "Regular Price", "Original Price", "MRP"]));
+    
+    const price = discountedPrice || originalPrice;
+    const regular = (discountedPrice && originalPrice && originalPrice > discountedPrice) ? originalPrice : null;
+    
+    const description = findValue(r, headers, ["Description", "Product Description", "Details"]);
+    const brand = findValue(r, headers, ["Brand", "Manufacturer"]);
+    const stock = findValue(r, headers, ["Stock", "Quantity", "Inventory"]);
+    const availability = findValue(r, headers, ["Availability", "Status"]);
+    
+    const image = safeUrl(findValue(r, headers, ["Thumbnail", "Image1", "Image URL", "Photo", "Image"]));
+    const image2 = safeUrl(findValue(r, headers, ["Image2"]));
+    const image3 = safeUrl(findValue(r, headers, ["Image3"]));
+    const link = safeUrl(findValue(r, headers, ["WhatsApp catalog link", "Link", "Product Link", "URL"]));
+    const tags = findValue(r, headers, ["Tag", "Tags", "Keywords", "SEO Title"]);
+    
+    const visible = !/^(hide|hidden|false|inactive|draft)$/i.test(availability);
+    return { name, category, price, regular, description, brand, stock, availability, image, images: [image, image2, image3].filter(Boolean), link, tags, visible };
+  }).filter(p => p.name && p.visible);
+}
+
+function isAvailable(p){
+  const s = String(p.stock || "").toLowerCase();
+  return /^(0|out of stock|sold out|unavailable)$/i.test(s) || /out of stock|sold out|unavailable/i.test(p.availability) ? "Out of stock" : "Available";
+}
+
+function orderUrl(p){
+  const msg = `Hello 11 CART! I would like to order/check availability:\nProduct: ${p.name}\nPrice: ${p.price ? "LKR " + fmt(p.price) : "Please confirm price"}\n${p.category ? "Category: " + p.category + "\n" : ""}Please confirm stock, delivery charge and payment options.`;
+  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+}
+
 function render(){
- const host=byId("products");host.replaceChildren();byId("productCount").textContent=shown.length+" "+(shown.length===1?"item":"items");
- if(!shown.length){const empty=make("div","empty");empty.innerHTML="<div style='font-size:36px'>🧸</div><strong>No little finds here yet</strong><span>Try a different search or category.</span>";host.appendChild(empty);return}
- shown.forEach(p=>{
-  const card=make("article","product");const photo=make("div","photo");photo.tabIndex=0;photo.setAttribute("role","button");photo.setAttribute("aria-label","View "+p.name);
-  const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.src=imageURL(p.thumbnail||p.image1);img.alt=p.name;img.onerror=()=>{img.onerror=null;img.src=PLACEHOLDER};photo.append(img);photo.onclick=()=>openDialog(p);photo.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDialog(p)}};
-  if(p.stock>0&&p.stock<=5){const badge=make("span","badge");badge.textContent="Limited stock";photo.appendChild(badge)}
-  if(p.discount>0&&p.discount<p.price){const badge=make("span","badge sale");badge.textContent=Math.round((p.price-p.discount)/p.price*100)+"% off";photo.appendChild(badge)}
-  const info=make("div","p-info"),cat=make("div","p-category"),name=make("div","p-name");cat.textContent=p.category;name.textContent=p.name;
-  const line=make("div","price-line"),pr=make("span","price");pr.textContent="Rs "+money(effective(p));line.appendChild(pr);
-  if(p.discount>0&&p.discount<p.price){const old=make("span","old-price");old.textContent="Rs "+money(p.price);line.appendChild(old)}
-  const actions=make("div","p-actions"),details=make("button","details-btn"),order=document.createElement("a");details.type="button";details.textContent="View details";details.onclick=()=>openDialog(p);order.className="order-btn";order.textContent="💬 Order";order.href=waURL(p,1,"");order.target="_blank";order.rel="noopener noreferrer";order.onclick=()=>{history.replaceState(null,"",productURL(p))};actions.append(details,order);info.append(cat,name,line,actions);card.append(photo,info);host.appendChild(card)
- });
+  const q = $("search").value.trim().toLowerCase(), cat = $("category").value, sort = $("sort").value;
+  let list = products.filter(p => (!q || [p.name, p.description, p.category, p.brand, p.tags].join(" ").toLowerCase().includes(q)) && (!cat || p.category === cat));
+  
+  if(sort === "name") list.sort((a,b) => a.name.localeCompare(b.name));
+  if(sort === "low") list.sort((a,b) => (a.price || Infinity) - (b.price || Infinity));
+  if(sort === "high") list.sort((a,b) => (b.price || 0) - (a.price || 0));
+  
+  $("count").textContent = `${list.length} product${list.length === 1 ? "" : "s"}`;
+  if(!list.length){
+    $("products").innerHTML = '<div class="status empty">No products match your search. Try another keyword or category.</div>';
+    return;
+  }
+  
+  $("products").innerHTML = list.map((p, i) => {
+    const old = p.regular && p.price && p.regular > p.price ? `<span class="oldprice">LKR ${fmt(p.regular)}</span>` : "";
+    const badge = old ? '<span class="tag">SPECIAL PRICE</span>' : "";
+    const stock = isAvailable(p);
+    const stockBadge = stock === "Out of stock" ? '<span class="stock">Out of stock</span>' : '<span class="stock">In stock*</span>';
+    const img = p.image ? `<img loading="lazy" src="${p.image.replace(/&/g,"&amp;").replace(/"/g,"&quot;")}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">` : "";
+    
+    return `<article class="card">
+      <div class="photo">${badge}${stockBadge}${img}<div class="photo-fallback" style="${p.image ? 'display:none' : ''}">🛍️<br>Photo unavailable</div></div>
+      <div class="card-body">
+        <div class="cat">${escapeHtml(p.category || "11 CART PICKS")}</div>
+        <div class="name">${escapeHtml(p.name)}</div>
+        ${p.description ? `<div class="desc">${escapeHtml(p.description)}</div>` : ""}
+        <div class="prices">${p.price ? `<span class="price">LKR ${fmt(p.price)}</span>` : '<span class="price">Ask for price</span>'}${old}</div>
+        <div class="card-actions">
+          <a class="order-btn" href="${orderUrl(p)}" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+          <button class="details-btn" data-details="${i}" type="button">View details</button>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+  
+  $("products").querySelectorAll("[data-details]").forEach(btn => btn.addEventListener("click", () => showDetails(list[Number(btn.dataset.details)])));
 }
-function filter(){
- const q=byId("search").value.trim().toLowerCase(),sort=byId("sort").value;
- shown=all.filter(p=>(!category||p.category.toLowerCase()===category.toLowerCase())&&(!q||(p.name+" "+p.category+" "+p.description).toLowerCase().includes(q)));
- if(sort==="low")shown.sort((a,b)=>effective(a)-effective(b));else if(sort==="high")shown.sort((a,b)=>effective(b)-effective(a));else if(sort==="az")shown.sort((a,b)=>a.name.localeCompare(b.name));
- render()
+
+function escapeHtml(s){ return String(s || "").replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[m])); }
+
+function showDetails(p){
+  $("modal-content").innerHTML = `<div class="cat">${escapeHtml(p.category || "11 CART")}</div>
+    <h3>${escapeHtml(p.name)}</h3>
+    <strong>${p.price ? "LKR " + fmt(p.price) : "Please ask for price"}</strong>
+    <p>${escapeHtml(p.description || "Contact 11 CART for product details.")}${p.brand ? "\nBrand: " + escapeHtml(p.brand) : ""}${p.stock ? "\nStock: " + escapeHtml(p.stock) : ""}\nAvailability and warranty should be confirmed before purchase.</p>
+    <a class="order-btn" style="display:block" href="${orderUrl(p)}" target="_blank" rel="noopener">💬 Ask / Order on WhatsApp</a>
+    ${p.link ? `<p><a href="${p.link}" target="_blank" rel="noopener">More product information ↗</a></p>` : ""}`;
+  $("details").showModal();
 }
-function openDialog(p){
- selected=p;history.replaceState(null,"",productURL(p));byId("dialogImg").src=imageURL(p.thumbnail||p.image1);byId("dialogImg").alt=p.name;text(byId("dialogCategory"),p.category);text(byId("dialogName"),p.name);text(byId("dialogPrice"),"Rs "+money(effective(p)));text(byId("dialogDesc"),p.description||"Contact us on WhatsApp for more details.");byId("quantity").value="1";byId("quantity").max=String(p.stock>0?p.stock:99);byId("area").value="";byId("overlay").classList.add("open");document.body.style.overflow="hidden";byId("quantity").focus()
+
+function buildCategories(){
+  const cats = [...new Set(products.map(p => p.category).filter(Boolean))].sort((a,b) => a.localeCompare(b));
+  cats.forEach(c => { const o = document.createElement("option"); o.value = c; o.textContent = c; $("category").appendChild(o); });
+  $("pills").innerHTML = [{ name: "All", value: "" }, ...cats.map(c => ({ name: c, value: c }))].slice(0, 14).map((c, i) => `<button type="button" class="pill ${i === 0 ? "active" : ""}" data-cat="${escapeHtml(c.value)}">${escapeHtml(c.name)}</button>`).join("");
+  $("pills").querySelectorAll("[data-cat]").forEach(b => b.addEventListener("click", () => { $("category").value = b.dataset.cat; $("pills").querySelectorAll(".pill").forEach(x => x.classList.toggle("active", x === b)); render(); }));
 }
-window.closeDialog=function(){byId("overlay").classList.remove("open");document.body.style.overflow="";selected=null;const u=new URL(location.href);u.searchParams.delete("product");history.replaceState(null,"",u.href)};
-function toast(msg){text(byId("toast"),msg);byId("toast").classList.add("show");setTimeout(()=>byId("toast").classList.remove("show"),2200)}
-byId("dialogOrder").onclick=()=>{if(!selected)return;const max=selected.stock>0?selected.stock:99;const q=Math.max(1,Math.min(max,parseInt(byId("quantity").value,10)||1));byId("quantity").value=String(q);window.open(waURL(selected,q,byId("area").value),"_blank","noopener,noreferrer")};
-byId("search").addEventListener("input",filter);byId("sort").addEventListener("change",filter);
-byId("clear").onclick=()=>{category="";byId("search").value="";byId("sort").value="";renderCategories();filter()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape")window.closeDialog()});
-async function load(){
- try{
-  if(!window.Papa)throw new Error("The product list could not load. Please refresh or message us on WhatsApp.");
-  const response=await fetch(SHEET_URL);if(!response.ok)throw new Error("The product list is temporarily unavailable. Please message us on WhatsApp.");
-  const csv=await response.text();
-  Papa.parse(csv,{header:true,skipEmptyLines:true,complete(result){
-   all=result.data.map(row=>({name:safeText(field(row,"Name")).trim(),category:safeText(field(row,"Category")).trim()||"General",price:price(field(row,"Price")),discount:price(field(row,"Discounted Price")),description:safeText(field(row,"Description")).trim(),stock:parseInt(field(row,"Stock"),10)||0,thumbnail:safeText(field(row,"Thumbnail")).trim(),image1:safeText(field(row,"Image1")).trim()})).filter(p=>p.name&&safeText(field(result.data.find(r=>safeText(field(r,"Name")).trim()===p.name)||{},"Availability")).trim().toLowerCase()!=="hide");
-   renderCategories();filter();const requested=new URLSearchParams(location.search).get("product");if(requested){const p=all.find(item=>item.name.toLowerCase()===requested.toLowerCase());if(p)openDialog(p)}
-  },error(){byId("products").innerHTML="<div class='state'>Couldn’t load the collection right now. Please try again later or message us on WhatsApp.</div>"}})
- }catch(err){byId("products").innerHTML="<div class='state'>"+err.message+"</div>"}
+
+async function loadProducts(){
+  try{
+    const response = await fetch(SHEET_CSV_URL, { cache: "no-store" });
+    if(!response.ok) throw new Error("Could not fetch the spreadsheet");
+    const text = await response.text();
+    if(/<html|accounts\.google\.com|Sign in/i.test(text.slice(0, 500))) throw new Error("The sheet is not publicly readable");
+    products = normalise(parseCSV(text));
+    if(!products.length) throw new Error("No visible products with names found");
+    $("status").style.display = "none"; buildCategories(); render();
+  }catch(err){
+    $("count").textContent = "Products unavailable";
+    $("status").innerHTML = "We couldn’t load the product list right now.<br><br>Please check the Google Sheet’s sharing/published CSV settings and the SHEET_CSV_URL in index.html. You can still contact us on <a href='https://wa.me/94768665158' target='_blank' rel='noopener'>WhatsApp</a>.";
+    console.error("11 CART product feed:", err);
+  }
 }
-load();
-})();
+
+$("search").addEventListener("input", render);
+$("category").addEventListener("change", () => { $("pills").querySelectorAll(".pill").forEach(b => b.classList.toggle("active", b.dataset.cat === $("category").value)); render(); });
+$("sort").addEventListener("change", render);
+$("close-modal").addEventListener("click", () => $("details").close());
+$("details").addEventListener("click", e => { if(e.target === $("details")) $("details").close(); });
+$("year").textContent = new Date().getFullYear();
+loadProducts();
 </script>
+<noscript><div style="padding:20px">Please enable JavaScript to browse the 11 CART product catalog.</div></noscript>
 </body>
 </html>
