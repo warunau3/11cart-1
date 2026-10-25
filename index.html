@@ -590,6 +590,8 @@ function getAvgRating(name){const r=getReviews(name);if(!r.length)return 0;retur
 function parsePrice(s){if(!s)return 0;return parseFloat(s.toString().replace(/,/g,"").replace(/[^\d.]/g,""))||0;}
 const PLACEHOLDER_IMG="data:image/svg+xml;utf8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#fff3ec"/><text x="50%" y="50%" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#ff5c00" text-anchor="middle" dominant-baseline="middle">11Cart</text></svg>');
 function fmtPrice(n){return n.toLocaleString("en-LK",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function escapeHTML(value){return String(value??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(new RegExp(String.fromCharCode(39),"g"),"&#39;");}
+function safeImageURL(value){try{const raw=String(value||"").trim();if(!raw)return PLACEHOLDER_IMG;const url=new URL(raw,window.location.href);if(url.protocol==="https:"||url.protocol==="http:")return url.href;}catch(e){}return PLACEHOLDER_IMG;}
 function col(item,name){
   if(item[name]!==undefined)return item[name]||"";
   const low=name.toLowerCase().replace(/\s+/g," ").trim();
@@ -664,10 +666,10 @@ async function loadProducts(){
         updateCategoryCounts();
         renderProducts(allProducts);
       },
-      error(err){container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px;font-weight:700;color:#c00'>Parse error: ${err}</div>`;}
+      error(err){container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px;font-weight:700;color:#c00'>Parse error: ${escapeHTML(err)}</div>`;}
     });
   }catch(err){
-    container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px'><div style='font-size:48px'>⚠️</div><p style='font-size:19px;font-weight:800;margin-top:14px'>Products load කරන්න බැරිඋනා</p><p style='font-size:15px;color:#888;margin-top:8px'>${err.message}</p><p style='font-size:14px;color:#aaa;margin-top:8px'>Google Sheet published CSV URL එක check කරන්න</p></div>`;
+    container.innerHTML=`<div style='grid-column:1/-1;text-align:center;padding:60px'><div style='font-size:48px'>⚠️</div><p style='font-size:19px;font-weight:800;margin-top:14px'>Products load කරන්න බැරිඋනා</p><p style='font-size:15px;color:#888;margin-top:8px'>${escapeHTML(err.message)}</p><p style='font-size:14px;color:#aaa;margin-top:8px'>Google Sheet published CSV URL එක check කරන්න</p></div>`;
   }
 }
 
@@ -690,8 +692,8 @@ function renderProducts(products){
     const showPrice=hasDis?p.discountedPrice:p.price;
     const discPct=hasDis?Math.round(((p.price-p.discountedPrice)/p.price)*100):0;
     const lowStock=p.stock>0&&p.stock<=5;
-    const thumb=p.thumbnail||p.image1||PLACEHOLDER_IMG;
-    const safeName=p.name.replace(/"/g,"&quot;");
+    const thumb=escapeHTML(safeImageURL(p.thumbnail||p.image1));
+    const safeName=escapeHTML(p.name);
     const avg=getAvgRating(p.name);
     const revCount=getReviews(p.name).length;
 
@@ -701,9 +703,9 @@ function renderProducts(products){
     html+=hasDis?`<span class="badge-discount">-${discPct}%</span>`:'';
     html+=`</div>`;
     html+=`<div class="card-img-wrap"><img loading="lazy" src="${thumb}" alt="${safeName}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'"><div class="quick-view-overlay"><span class="quick-view-btn">👁 Quick View</span></div></div>`;
-    html+=`<div class="card-body"><div class="card-top-row"><span class="card-cat">${p.category}</span>`;
+    html+=`<div class="card-body"><div class="card-top-row"><span class="card-cat">${escapeHTML(p.category)}</span>`;
     if(avg>0)html+=`<div class="card-stars"><span class="stars-display">${starsHTML(avg)}</span><span class="rating-num">(${revCount})</span></div>`;
-    html+=`</div><h3>${p.name}</h3><div class="card-price-row"><span class="card-price">Rs ${fmtPrice(showPrice)}</span>`;
+    html+=`</div><h3>${escapeHTML(p.name)}</h3><div class="card-price-row"><span class="card-price">Rs ${fmtPrice(showPrice)}</span>`;
     if(hasDis)html+=`<span class="card-old-price">Rs ${fmtPrice(p.price)}</span>`;
     html+=`</div><div class="card-actions"><button class="card-details-btn" onclick="event.stopPropagation();openModal(${i})">Details</button><a class="card-wa-btn" href="https://wa.me/94768665158?text=I+want+to+order+${encodeURIComponent(p.name)}" target="_blank" onclick="event.stopPropagation();if(typeof fbq!=='undefined')fbq('track','Contact');">💬 Order</a></div></div></div>`;
   }
@@ -779,7 +781,7 @@ function updateActiveFilterChips(){
   if(sort)chips.push({label:'↕ '+document.getElementById('sortSelect').selectedOptions[0].text,clear:()=>{document.getElementById('sortSelect').value='';applyAndRender();}});
   if(!chips.length){bar.style.display='none';return;}
   bar.style.display='flex';
-  bar.innerHTML='<span style="font-size:12px;font-weight:700;color:#aaa">Filters:</span>'+chips.map((c,i)=>`<span class="filter-chip" onclick="chipClear(${i})">${c.label} <span>✕</span></span>`).join('');
+  bar.innerHTML='<span style="font-size:12px;font-weight:700;color:#aaa">Filters:</span>'+chips.map((c,i)=>`<span class="filter-chip" onclick="chipClear(${i})">${escapeHTML(c.label)} <span>✕</span></span>`).join('');
   bar._fns=chips.map(c=>c.clear);
 }
 function chipClear(i){const b=document.getElementById('activeFilters');if(b._fns&&b._fns[i])b._fns[i]();}
@@ -803,10 +805,10 @@ function openModal(i){
   const hasDis=p.discountedPrice>0&&p.discountedPrice<p.price;
   const showPrice=hasDis?p.discountedPrice:p.price;
   const savings=hasDis?(p.price-p.discountedPrice):0;
-  const images=[p.thumbnail,p.image1,p.image2].filter(x=>x&&x.trim()!=="");
+  const images=[p.thumbnail,p.image1,p.image2].filter(x=>x&&x.trim()!=="").map(safeImageURL);
   const mainSrc=images[0]||PLACEHOLDER_IMG;
 
-  document.getElementById('modalMainImg').src=mainSrc;
+  document.getElementById('modalMainImg').src=safeImageURL(mainSrc);
   document.getElementById('modalName').textContent=p.name;
   document.getElementById('modalCat').textContent=p.category;
   document.getElementById('modalPrice').textContent="Rs "+fmtPrice(showPrice);
@@ -830,13 +832,13 @@ function openModal(i){
   if(p.material)tags.push("🧱 "+p.material);
   if(p.theme)tags.push("🎯 "+p.theme);
   if(p.brand&&p.brand!=="11 Cart"&&p.brand!=="11Cart")tags.push("🏷️ "+p.brand);
-  document.getElementById('modalTags').innerHTML=tags.map(t=>`<span class="modal-tag">${t}</span>`).join("");
+  document.getElementById('modalTags').innerHTML=tags.map(t=>`<span class="modal-tag">${escapeHTML(t)}</span>`).join("");
 
   document.getElementById('modalDesc').textContent=p.description||"Contact us on WhatsApp for more details.";
 
   // Thumbs
   const thumbsEl=document.getElementById('modalThumbs');
-  thumbsEl.innerHTML=images.length>1?images.map((img,idx)=>`<img class="modal-thumb ${idx===0?'active':''}" src="${img}" onclick="switchImg(this,'${img}')" onerror="this.style.display='none'">`).join(""):"";
+  thumbsEl.innerHTML=images.length>1?images.map((img,idx)=>`<img class="modal-thumb ${idx===0?'active':''}" src="${escapeHTML(img)}" onclick="switchImg(this,this.src)" onerror="this.style.display='none'">`).join(""):"";
 
   // Specs
   const specs=[];
@@ -846,7 +848,7 @@ function openModal(i){
   if(p.theme)specs.push(['Theme',p.theme]);
   if(p.stock>0)specs.push(['Stock',p.stock+' available']);
   const specsEl=document.getElementById('modalSpecs');
-  if(specs.length){specsEl.style.display='block';specsEl.innerHTML=`<div class="modal-specs-title">Product Details</div>`+specs.map(([k,v])=>`<div class="spec-row"><span class="spec-key">${k}</span><span class="spec-val">${v}</span></div>`).join('');}
+  if(specs.length){specsEl.style.display='block';specsEl.innerHTML=`<div class="modal-specs-title">Product Details</div>`+specs.map(([k,v])=>`<div class="spec-row"><span class="spec-key">${escapeHTML(k)}</span><span class="spec-val">${escapeHTML(v)}</span></div>`).join('');}
   else specsEl.style.display='none';
 
   // Rating
@@ -887,7 +889,7 @@ function renderReviewsList(productName){
   const titleEl=document.getElementById('reviewsTitle');
   titleEl.textContent=reviews.length?`Customer Reviews (${reviews.length})`:'Customer Reviews';
   if(!reviews.length){el.innerHTML=`<div class="no-reviews">💬 Be the first to review this product!</div>`;return;}
-  el.innerHTML=reviews.slice().reverse().map(r=>`<div class="review-card"><div class="review-top"><span class="review-name">${r.name}</span><span class="review-stars">${starsHTML(r.rating)}</span></div><div class="review-date">${r.date}</div><div class="review-text">${r.text}</div></div>`).join('');
+  el.innerHTML=reviews.slice().reverse().map(r=>`<div class="review-card"><div class="review-top"><span class="review-name">${escapeHTML(r.name)}</span><span class="review-stars">${starsHTML(r.rating)}</span></div><div class="review-date">${escapeHTML(r.date)}</div><div class="review-text">${escapeHTML(r.text)}</div></div>`).join('');
 }
 
 function toggleReviewForm(){document.getElementById('reviewForm').classList.toggle('open');}
